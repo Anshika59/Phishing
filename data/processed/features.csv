@@ -1,0 +1,5 @@
+label,spf_pass,dkim_pass,dmarc_pass,reply_to_mismatch,typosquat_flag,bert_word_count,bert_char_count,tfidf_access,tfidf_anshika,tfidf_attached,tfidf_bank,tfidf_click,tfidf_com,tfidf_customer,tfidf_dear,tfidf_http,tfidf_login
+1,0,0,0,0,1,10,81,0.4854606118156975,0.0,0.0,0.4854606118156975,0.4854606118156975,0.3827427224171519,0.0,0.0,0.3827427224171519,0.0
+0,0,0,0,0,0,10,60,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1,0,0,0,0,0,9,73,0.0,0.0,0.0,0.0,0.0,0.29294638531870676,0.37156534433335936,0.37156534433335936,0.29294638531870676,0.7431306886667187
+0,0,0,0,0,0,11,52,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
