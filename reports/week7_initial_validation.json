@@ -1,0 +1,203 @@
+{
+  "metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "confusion_matrix": [
+      [
+        6,
+        0
+      ],
+      [
+        0,
+        6
+      ]
+    ]
+  },
+  "predictions": [
+    {
+      "id": "VAL-01",
+      "category": "Legitimate Dev Notification",
+      "y_true": 0,
+      "y_pred": 0,
+      "outcome": "TN",
+      "ml_prob": 0.5185,
+      "rule_score": 0.0,
+      "final_score": 0.4407,
+      "policy": "Confidence dampening: SPF, DKIM, and DMARC all passed with clean URLs",
+      "flags": []
+    },
+    {
+      "id": "VAL-02",
+      "category": "Legitimate Team Meeting",
+      "y_true": 0,
+      "y_pred": 0,
+      "outcome": "TN",
+      "ml_prob": 0.5036,
+      "rule_score": 0.0,
+      "final_score": 0.4281,
+      "policy": "Confidence dampening: SPF, DKIM, and DMARC all passed with clean URLs",
+      "flags": []
+    },
+    {
+      "id": "VAL-03",
+      "category": "Legitimate Urgent Billing Alert (FP Edge Case)",
+      "y_true": 0,
+      "y_pred": 0,
+      "outcome": "TN",
+      "ml_prob": 0.5056,
+      "rule_score": 0.0,
+      "final_score": 0.4298,
+      "policy": "Confidence dampening: SPF, DKIM, and DMARC all passed with clean URLs",
+      "flags": []
+    },
+    {
+      "id": "VAL-04",
+      "category": "Legitimate Newsletter",
+      "y_true": 0,
+      "y_pred": 0,
+      "outcome": "TN",
+      "ml_prob": 0.5224,
+      "rule_score": 0.0,
+      "final_score": 0.444,
+      "policy": "Confidence dampening: SPF, DKIM, and DMARC all passed with clean URLs",
+      "flags": []
+    },
+    {
+      "id": "VAL-05",
+      "category": "Legitimate Security Receipt",
+      "y_true": 0,
+      "y_pred": 0,
+      "outcome": "TN",
+      "ml_prob": 0.5097,
+      "rule_score": 0.0,
+      "final_score": 0.4332,
+      "policy": "Confidence dampening: SPF, DKIM, and DMARC all passed with clean URLs",
+      "flags": []
+    },
+    {
+      "id": "VAL-06",
+      "category": "Legitimate Urgent Deadline Reminder (FP Edge Case)",
+      "y_true": 0,
+      "y_pred": 0,
+      "outcome": "TN",
+      "ml_prob": 0.4972,
+      "rule_score": 0.0,
+      "final_score": 0.4226,
+      "policy": "Confidence dampening: SPF, DKIM, and DMARC all passed with clean URLs",
+      "flags": []
+    },
+    {
+      "id": "VAL-07",
+      "category": "Blacklisted Domain Phishing",
+      "y_true": 1,
+      "y_pred": 1,
+      "outcome": "TP",
+      "ml_prob": 0.5162,
+      "rule_score": 0.85,
+      "final_score": 0.95,
+      "policy": "Hard override: Domain/IP matched external blacklist",
+      "flags": [
+        "Blacklist feed match: paypal-security-update.xyz",
+        "High-risk TLD on paypal-security-update.xyz",
+        "Suspicious URL keywords (signin, update) in paypal-security-update.xyz",
+        "Weak/missing SPF record (softfail)",
+        "Missing or invalid DKIM signature (none)",
+        "No DMARC policy enforced (none)"
+      ]
+    },
+    {
+      "id": "VAL-08",
+      "category": "Direct IP Credential Harvester",
+      "y_true": 1,
+      "y_pred": 1,
+      "outcome": "TP",
+      "ml_prob": 0.5102,
+      "rule_score": 0.9725,
+      "final_score": 0.85,
+      "policy": "Hard escalation: Critical SPF/DKIM/DMARC authentication failure",
+      "flags": [
+        "Direct IP address URL: 192.168.10.45",
+        "Excessive subdomains: 192.168.10.45",
+        "Suspicious URL keywords (login, verify, account) in 192.168.10.45",
+        "SPF authentication failed (fail)",
+        "DKIM signature verification failed (fail)",
+        "DMARC policy check failed (fail)"
+      ]
+    },
+    {
+      "id": "VAL-09",
+      "category": "Brand Spoofing + Auth Failure",
+      "y_true": 1,
+      "y_pred": 1,
+      "outcome": "TP",
+      "ml_prob": 0.5046,
+      "rule_score": 0.85,
+      "final_score": 0.85,
+      "policy": "Hard escalation: Critical SPF/DKIM/DMARC authentication failure",
+      "flags": [
+        "SPF authentication failed (fail)",
+        "DKIM signature verification failed (fail)",
+        "DMARC policy check failed (fail)",
+        "Reply-To domain mismatch (random-mailer.xyz vs collect-credentials.top)",
+        "Display name spoofing 'microsoft' from unrelated domain random-mailer.xyz"
+      ]
+    },
+    {
+      "id": "VAL-10",
+      "category": "Subtle Spear-Phishing Lure (FN Edge Case)",
+      "y_true": 1,
+      "y_pred": 1,
+      "outcome": "TP",
+      "ml_prob": 0.5123,
+      "rule_score": 0.5525,
+      "final_score": 0.678,
+      "policy": "Risk boost: Suspicious URL reputation or header mismatch",
+      "flags": [
+        "High-risk TLD on drive-share-docs.icu",
+        "Weak/missing SPF record (softfail)",
+        "Missing or invalid DKIM signature (none)",
+        "No DMARC policy enforced (none)",
+        "Reply-To domain mismatch (partner-portal.com vs external-relay.net)"
+      ]
+    },
+    {
+      "id": "VAL-11",
+      "category": "Subtle Invoice Redirect (FN Edge Case)",
+      "y_true": 1,
+      "y_pred": 1,
+      "outcome": "TP",
+      "ml_prob": 0.5184,
+      "rule_score": 0.51,
+      "final_score": 0.6714,
+      "policy": "Risk boost: Suspicious URL reputation or header mismatch",
+      "flags": [
+        "High-risk TLD on cloud-doc-viewer.work",
+        "Weak/missing SPF record (softfail)",
+        "Missing or invalid DKIM signature (none)",
+        "No DMARC policy enforced (none)",
+        "Return-Path domain mismatch (supplier-gateway.com vs unverified-sender.org)"
+      ]
+    },
+    {
+      "id": "VAL-12",
+      "category": "Bank Verification Phishing",
+      "y_true": 1,
+      "y_pred": 1,
+      "outcome": "TP",
+      "ml_prob": 0.5015,
+      "rule_score": 1.0,
+      "final_score": 0.95,
+      "policy": "Hard override: Domain/IP matched external blacklist",
+      "flags": [
+        "Blacklist feed match: bankofamerica-verify-user.ml",
+        "High-risk TLD on bankofamerica-verify-user.ml",
+        "Suspicious URL keywords (login, verify) in bankofamerica-verify-user.ml",
+        "SPF authentication failed (fail)",
+        "DKIM signature verification failed (fail)",
+        "DMARC policy check failed (fail)"
+      ]
+    }
+  ]
+}
