@@ -1,0 +1,10 @@
+{
+  "version": "2.0-refined",
+  "ml_weight": 0.65,
+  "rule_weight": 0.35,
+  "decision_threshold": 0.55,
+  "blacklist_floor": 0.96,
+  "critical_auth_floor": 0.88,
+  "corroborated_signal_floor": 0.62,
+  "verified_sender_dampening_factor": 0.72
+}

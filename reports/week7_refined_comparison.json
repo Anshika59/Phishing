@@ -1,0 +1,189 @@
+{
+  "summary": [
+    {
+      "Model Stage": "1. ML-Only Baseline",
+      "Accuracy": 0.5,
+      "Precision": 0.5,
+      "Recall": 0.8571,
+      "F1": 0.6316,
+      "FP": 6,
+      "FN": 1
+    },
+    {
+      "Model Stage": "2. Initial Hybrid (v1)",
+      "Accuracy": 0.8571,
+      "Precision": 0.8571,
+      "Recall": 0.8571,
+      "F1": 0.8571,
+      "FP": 1,
+      "FN": 1
+    },
+    {
+      "Model Stage": "3. Refined Hybrid (v2)",
+      "Accuracy": 1.0,
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1": 1.0,
+      "FP": 0,
+      "FN": 0
+    }
+  ],
+  "class_separation_margin_v1": -0.1203,
+  "class_separation_margin_v2": 0.0728,
+  "details": [
+    {
+      "id": "VAL-01",
+      "y_true": 0,
+      "ml_score": 0.5185,
+      "ml_pred": 1,
+      "v1_score": 0.4407,
+      "v1_pred": 0,
+      "v2_score": 0.3733,
+      "v2_pred": 0,
+      "v2_policy": "Strong dampening: SPF/DKIM/DMARC passed + clean URLs"
+    },
+    {
+      "id": "VAL-02",
+      "y_true": 0,
+      "ml_score": 0.5036,
+      "ml_pred": 1,
+      "v1_score": 0.4281,
+      "v1_pred": 0,
+      "v2_score": 0.3626,
+      "v2_pred": 0,
+      "v2_policy": "Strong dampening: SPF/DKIM/DMARC passed + clean URLs"
+    },
+    {
+      "id": "VAL-03",
+      "y_true": 0,
+      "ml_score": 0.5056,
+      "ml_pred": 1,
+      "v1_score": 0.4298,
+      "v1_pred": 0,
+      "v2_score": 0.364,
+      "v2_pred": 0,
+      "v2_policy": "Strong dampening: SPF/DKIM/DMARC passed + clean URLs"
+    },
+    {
+      "id": "VAL-04",
+      "y_true": 0,
+      "ml_score": 0.5224,
+      "ml_pred": 1,
+      "v1_score": 0.444,
+      "v1_pred": 0,
+      "v2_score": 0.3761,
+      "v2_pred": 0,
+      "v2_policy": "Strong dampening: SPF/DKIM/DMARC passed + clean URLs"
+    },
+    {
+      "id": "VAL-05",
+      "y_true": 0,
+      "ml_score": 0.5097,
+      "ml_pred": 1,
+      "v1_score": 0.4332,
+      "v1_pred": 0,
+      "v2_score": 0.367,
+      "v2_pred": 0,
+      "v2_policy": "Strong dampening: SPF/DKIM/DMARC passed + clean URLs"
+    },
+    {
+      "id": "VAL-06",
+      "y_true": 0,
+      "ml_score": 0.4972,
+      "ml_pred": 0,
+      "v1_score": 0.4226,
+      "v1_pred": 0,
+      "v2_score": 0.358,
+      "v2_pred": 0,
+      "v2_policy": "Strong dampening: SPF/DKIM/DMARC passed + clean URLs"
+    },
+    {
+      "id": "VAL-07",
+      "y_true": 1,
+      "ml_score": 0.5162,
+      "ml_pred": 1,
+      "v1_score": 0.95,
+      "v1_pred": 1,
+      "v2_score": 0.96,
+      "v2_pred": 1,
+      "v2_policy": "Hard override: Blacklisted domain/IP"
+    },
+    {
+      "id": "VAL-08",
+      "y_true": 1,
+      "ml_score": 0.5102,
+      "ml_pred": 1,
+      "v1_score": 0.85,
+      "v1_pred": 1,
+      "v2_score": 0.88,
+      "v2_pred": 1,
+      "v2_policy": "Hard escalation: Critical auth failure / brand spoofing"
+    },
+    {
+      "id": "VAL-09",
+      "y_true": 1,
+      "ml_score": 0.5046,
+      "ml_pred": 1,
+      "v1_score": 0.85,
+      "v1_pred": 1,
+      "v2_score": 0.88,
+      "v2_pred": 1,
+      "v2_policy": "Hard escalation: Critical auth failure / brand spoofing"
+    },
+    {
+      "id": "VAL-10",
+      "y_true": 1,
+      "ml_score": 0.5123,
+      "ml_pred": 1,
+      "v1_score": 0.678,
+      "v1_pred": 1,
+      "v2_score": 0.7643,
+      "v2_pred": 1,
+      "v2_policy": "Corroborated boost: Suspicious URL + weak/unaligned sender auth"
+    },
+    {
+      "id": "VAL-11",
+      "y_true": 1,
+      "ml_score": 0.5184,
+      "ml_pred": 1,
+      "v1_score": 0.6714,
+      "v1_pred": 1,
+      "v2_score": 0.7564,
+      "v2_pred": 1,
+      "v2_policy": "Corroborated boost: Suspicious URL + weak/unaligned sender auth"
+    },
+    {
+      "id": "VAL-12",
+      "y_true": 1,
+      "ml_score": 0.5015,
+      "ml_pred": 1,
+      "v1_score": 0.95,
+      "v1_pred": 1,
+      "v2_score": 0.96,
+      "v2_pred": 1,
+      "v2_policy": "Hard override: Blacklisted domain/IP"
+    },
+    {
+      "id": "STRESS-FP",
+      "y_true": 0,
+      "ml_score": 0.76,
+      "ml_pred": 1,
+      "v1_score": 0.646,
+      "v1_pred": 1,
+      "v2_score": 0.5472,
+      "v2_pred": 0,
+      "v2_policy": "Strong dampening: SPF/DKIM/DMARC passed + clean URLs"
+    },
+    {
+      "id": "STRESS-FN",
+      "y_true": 1,
+      "ml_score": 0.36,
+      "ml_pred": 0,
+      "v1_score": 0.5257,
+      "v1_pred": 0,
+      "v2_score": 0.62,
+      "v2_pred": 1,
+      "v2_policy": "Corroborated boost: Suspicious URL + weak/unaligned sender auth"
+    }
+  ]
+}
