@@ -1,0 +1,140 @@
+[
+  {
+    "sample": "Sample 1: Suspected Credential Phishing Email",
+    "verdict": "PHISHING",
+    "final_hybrid_score": 0.96,
+    "ml_probability": 0.5778,
+    "rule_risk_score": 1.0,
+    "plain_language_summary": "This email is classified as PHISHING (96.0% risk score). The linked domain appears on a known phishing blacklist (microsoft-auth-alert.top). Do not click any links or share credentials.",
+    "plain_language_reasons": [
+      "The linked domain appears on a known phishing blacklist (microsoft-auth-alert.top).",
+      "The link uses a top-level domain frequently abused in phishing campaigns (High-risk TLD on microsoft-auth-alert.top).",
+      "The web address contains credential-harvesting keywords (Suspicious URL keywords (login) in microsoft-auth-alert.top).",
+      "The sending server failed SPF verification, meaning it is not authorized to send for this domain.",
+      "The email's cryptographic DKIM signature failed verification, indicating possible tampering or spoofing.",
+      "The message failed DMARC domain alignment and anti-spoofing policy checks.",
+      "Replies are routed to a different external domain than the visible sender (Reply-To domain mismatch (microsoft-auth-alert.top vs collect-credentials.top)).",
+      "Metadata attribution (SHAP) evaluated structural features such as number of embedded links (value=1.0)."
+    ],
+    "shap_top_features": [
+      {
+        "feature": "url_count",
+        "feature_value": 1.0,
+        "shap_value": 0.0,
+        "impact": "decreases_phishing_risk"
+      },
+      {
+        "feature": "has_ip_in_url",
+        "feature_value": 0.0,
+        "shap_value": 0.0,
+        "impact": "decreases_phishing_risk"
+      },
+      {
+        "feature": "has_redirect_in_url",
+        "feature_value": 0.0,
+        "shap_value": 0.0,
+        "impact": "decreases_phishing_risk"
+      },
+      {
+        "feature": "has_risky_attachment",
+        "feature_value": 0.0,
+        "shap_value": 0.0,
+        "impact": "decreases_phishing_risk"
+      }
+    ],
+    "lime_top_tokens": [
+      {
+        "token": "suspended",
+        "lime_weight": -0.00652,
+        "impact": "decreases_phishing_risk"
+      },
+      {
+        "token": "microsoft",
+        "lime_weight": -0.0048,
+        "impact": "decreases_phishing_risk"
+      },
+      {
+        "token": "your",
+        "lime_weight": -0.00359,
+        "impact": "decreases_phishing_risk"
+      },
+      {
+        "token": "https",
+        "lime_weight": -0.00261,
+        "impact": "decreases_phishing_risk"
+      },
+      {
+        "token": "account",
+        "lime_weight": -0.00226,
+        "impact": "decreases_phishing_risk"
+      }
+    ]
+  },
+  {
+    "sample": "Sample 2: Legitimate Repository Notification",
+    "verdict": "LEGITIMATE",
+    "final_hybrid_score": 0.4161,
+    "ml_probability": 0.5779,
+    "rule_risk_score": 0.0,
+    "plain_language_summary": "This email is classified as LEGITIMATE (41.6% risk score). Sender authentication (SPF, DKIM, and DMARC) passed and all embedded links appear clean.",
+    "plain_language_reasons": [
+      "Sender authentication (SPF, DKIM, and DMARC) passed and all embedded links appear clean.",
+      "Text analysis (LIME) flagged words/phrases ('Anshika59') that strongly resemble phishing lures.",
+      "Text analysis (LIME) identified normal conversational terms ('merged', 'has', '45') associated with legitimate mail.",
+      "Metadata attribution (SHAP) evaluated structural features such as number of embedded links (value=1.0)."
+    ],
+    "shap_top_features": [
+      {
+        "feature": "url_count",
+        "feature_value": 1.0,
+        "shap_value": 0.0,
+        "impact": "decreases_phishing_risk"
+      },
+      {
+        "feature": "has_ip_in_url",
+        "feature_value": 0.0,
+        "shap_value": 0.0,
+        "impact": "decreases_phishing_risk"
+      },
+      {
+        "feature": "has_redirect_in_url",
+        "feature_value": 0.0,
+        "shap_value": 0.0,
+        "impact": "decreases_phishing_risk"
+      },
+      {
+        "feature": "has_risky_attachment",
+        "feature_value": 0.0,
+        "shap_value": 0.0,
+        "impact": "decreases_phishing_risk"
+      }
+    ],
+    "lime_top_tokens": [
+      {
+        "token": "merged",
+        "lime_weight": -0.00564,
+        "impact": "decreases_phishing_risk"
+      },
+      {
+        "token": "Anshika59",
+        "lime_weight": 0.00318,
+        "impact": "increases_phishing_risk"
+      },
+      {
+        "token": "has",
+        "lime_weight": -0.00259,
+        "impact": "decreases_phishing_risk"
+      },
+      {
+        "token": "45",
+        "lime_weight": -0.00205,
+        "impact": "decreases_phishing_risk"
+      },
+      {
+        "token": "sprint",
+        "lime_weight": -0.00164,
+        "impact": "decreases_phishing_risk"
+      }
+    ]
+  }
+]
